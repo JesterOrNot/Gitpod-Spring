@@ -2,5 +2,6 @@ FROM gitpod/workspace-full
 
 USER gitpod
 
-RUN sdk install groovy \
-    && sdk install springboot
+RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
+        && sdk install groovy \
+        && sdk install springboot
